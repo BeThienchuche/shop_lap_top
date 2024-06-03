@@ -1,0 +1,159 @@
+/*--------css phần đầu trang-------*/
+.myheader {
+    background-image: linear-gradient(to bottom right, #313838, rgb(166, 159, 160));
+    padding: 0px;
+    width: 100%;
+    height: 90px;
+  }
+
+  .text{
+    color:#f1eaea;
+  }
+  
+   /*------------CSS quà tặng và giỏ hàng------- */
+  .icon-box {
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(62, 62, 62);
+  }
+
+  .icon-box :hover{
+    color: #cd5ddf;
+  }
+ 
+  .icon-box i {
+    font-size: 1.5rem; 
+    color: #f6ddf6; 
+  }
+
+  /*------------CSS phần menu------------*/
+  .nav-menu .menu-title {
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .menu-1 {
+    position: absolute;
+    background-color: rgb(170, 252, 239);
+    padding: 0px;
+    margin-left: 90px;
+    top:19%;
+    width: 200px;  
+    z-index: 9;
+    display: none;
+  }
+  
+  .nav-menu:hover > .menu-1 {
+    display: block;
+  }
+  
+  .menu-1 li a { /* Định dạng màu chữ và xóa dấu gạch link*/
+    color: black;
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+  }
+  
+  .menu-1 li a:hover {
+    background-color: rgb(15, 145, 238);
+    font-weight: bold;
+  }
+  
+  /*----------Định dạnh css cho phần sản phẩm trong .navbar-nav*/
+  .nav-item li a{
+    color: black;
+    display: block;
+    padding: 19px 20px;
+    text-decoration: none;
+  }
+
+  .nav-item ul.sub-menu {
+    position: absolute;
+    background-color: rgb(170, 252, 239);
+    padding: 0px;
+    width: 200px;
+    list-style: none;
+    z-index: 9;
+  }
+
+  .sub-menu{
+    display: none;
+  }
+
+   li:hover>.sub-menu {
+    display: block;
+  }
+   
+  .nav-item ul.sub-menu a{
+    padding: 8px 15px;
+    border: 0.1px solid #ccc;
+    left: 0;
+  }
+
+  .nav-item ul.sub-menu ul.sub-menu{ /*dịch chuyển các thẻ con của thẻ cha "sản phẩm"*/
+  left: 200px;
+  top: -1px;
+ }
+
+ .nav-link {
+  font-size: 17px !important;
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/*
+.nav-item :hover  {
+  color: red !important;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-item:hover{
+  background-color: #f7f4f7;
+ color: red;
+}
+
+.navbar-nav .sub-menu li:hover{
+  color: red;
+  background-color: #eb6c22;
+}*/
+
+.nav-item:hover > .nav-link { /*lựa chọn hậu duệ con trực tiếp*/
+  color: red !important;
+  font-weight: bold;
+}
+
+.sub-menu li:hover > a {
+  color: red;
+  font-weight: bold;
+}
+
+
+
+ /*------------hiệu ứng chuyển động cho phần sản phẩm ----------*/
+ .nav-item.dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
+  transition: transform 0.35s ease-in-out;
+}
+
+.nav-item.dropdown .dropdown-toggle::after {
+  transform: rotate(0deg);
+  transition: transform 0.35s ease-in-out;
+}
+
+.sub-menu {
+  animation: flip-in 0.35s ease-out forwards;
+}
+
+@keyframes flip-in {
+  from {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+

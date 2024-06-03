@@ -1,0 +1,54 @@
+/*css các website cuối chân trang*/
+.myfooter{
+    background-color: #ebeef1;
+   
+  }
+    .myfooter ul{
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+    }
+  
+    .myfooter ul>li>a{
+      text-decoration: none;
+      color:black;
+  
+    }
+  
+    .myfooter .list-menu a:hover {
+      color: red; /* Thay đổi màu sang đỏ */
+  }
+    .circle{
+      background-color: #fff;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      display: inline-block;
+      border-radius: 50%;
+    }
+  
+    #backtop{
+      width: 50px;
+      height: 50px;
+      background-color: aqua;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 50%;
+      position: fixed;
+      bottom: 40px;
+      right: 5px;
+      cursor: pointer;
+    }
+
+    .fa-angles-up{
+      padding: 12px 2px 12px 13px;
+      font-size: 25px;
+    }
+
+    .fa-angles-up:hover{
+      color: rgb(222, 17, 119);
+    }
+
+   

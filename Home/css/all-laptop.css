@@ -1,0 +1,513 @@
+
+  /*---------------------------------------Phần nội dung-------------------------------------------------------------*/
+li{
+  list-style: none;
+}
+
+.slider-content{
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-content-left{
+   width: 100%;
+}
+
+.slider-content-left-top{
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.slider-content-left-top img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /*giữ nguyên hình ảnh*/
+}
+
+.slider-content-left-bottom{
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid #ddd;
+  border-radius: 0px 0px 5px 5px; /*bo tròn góc*/
+  border-top: none;
+}
+
+.slider-content-left-bottom li {
+   width: 30%;
+   text-align: center;
+   cursor: pointer; /*chỉ định con trỏ chuột sẽ được hiển thị khi trỏ qua một phần tử*/
+   height: 100%;
+   line-height: 18px;/*thiết lập chiều cao chữ*/
+   position: relative;
+   
+}
+
+.slider-content-left-bottom li p{
+  margin-bottom: 1px;
+}
+
+.slider-content-left-bottom li::before {
+  display: block;
+  content: "";
+  position: absolute;
+  height: 80%;
+  width:1px;
+  background-color: #ddd;
+  right: 0;
+}
+
+.slider-content-left-top-btn{
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.slider-content-left-top-btn i{
+  color: #333;
+  font-size: 32px;
+  height: 50px;
+  width: 25px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  opacity: 0;
+  transition: all  0.2s ease;
+}
+
+.slider-content-left-top img{
+  position: absolute;
+}
+
+.slider-content-left-top a:nth-child(2) img{
+  transform: translate(100%);
+}
+
+.slider-content-left-top a:nth-child(3) img{
+  transform: translate(200%);
+}
+
+.slider-content-left-top a:nth-child(4) img{
+  transform: translate(300%);
+}
+
+.slider-content-left-top a:nth-child(5) img{
+  transform: translate(400%);
+}
+
+.slider-content-left-top a:nth-child(6) img{
+  transform: translate(500%);
+}
+
+
+.slider-content-left-top-container{
+  position: relative;
+  overflow: hidden;
+}
+
+
+.slider-content-left-top-container:hover i {
+  opacity: 1;
+}
+
+.slider-content-left-top{
+  transition: all 0.3s ease;
+}
+
+/*--------slider bottom-------*/
+.slider-content-left-bottom li.active {
+  border-top: 4px solid #0f85e6;
+  font-weight: bold;
+}
+
+.slider-content-left-bottom li {
+  border-top: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+}
+
+/*---------------------------------------img-logo-laptop----------------------------------------------------*/
+.logo-laptop {
+  background-color: #ccc; 
+  padding: 30px;
+  margin-left: 65px;
+  margin-right: 65px;
+  border-radius: 10px;
+  
+}
+
+.img-content {
+  display: flex;
+  justify-content: space-between; 
+}
+
+.img-content img {
+  width: 135px; 
+  height: 35px;
+  border-radius: 20px; 
+}
+
+.img-content img:hover{
+     border: 2px solid rgb(5, 70, 249);
+}
+
+/*----------------------------------------LAPTOP_MỚI-------------------------------------------------------*/
+.product-new{
+  background-color: #f6cfc9;
+  margin: 65px;
+  border-radius: 8px;
+  padding-bottom: 20px;
+ }
+
+
+ .product-new-title{
+   margin-bottom: 30px;
+ }  
+
+ .product-new-title h1{
+  color: #000000;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 35px;
+ }
+
+ .products-new{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;   /* -----------Tự động xuống dòng--------*/
+  margin-top: 30px;
+ }
+ 
+.hidden {  /*css nút xem thêm phần laptop mới*/
+  display: none;
+}
+
+#show-all{
+  background-color: #e7dede;
+  margin:10px 498px;
+  border-radius: 10px;
+  padding: 10px 100px;
+}
+
+#show-all li{
+  width: 100px;
+}
+
+/* -------------------------------------CSS mỗi mặt hàng laptop của các hãng_(product-item) --------------------------------------------*/
+.product-item{
+  background-color: #fffcfb;
+  width: 220px;
+  padding: 50px 12px 50px;
+  border: 1px solid #f3f1f1;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 15px;
+ }
+
+ .product-item> img{
+    width: 100%;
+    transition: all 0.3s ease;
+    margin-top: -15px;
+ }
+
+  .product-item:hover> img{
+  transform: translateY(-15px);
+ }
+
+
+  .product-item-text{
+  padding-top: 40px;
+ }
+
+  .product-item-text li{
+  margin-top: 3px;
+ }
+
+  .product-item-text li:first-child{ /*css phần tử li con đầu tiên */
+   height: 20px;
+   width: 70%;
+   background-color: rgb(244, 44, 111);
+   display: inline-block;
+   margin-top: -20px;
+   align-items: center;
+   border-radius: 40px;
+ }
+
+  .product-item-text li:first-child p{
+  color: #fff;
+  font-size: 12px;
+  margin-top: 1px;
+ }
+
+  .product-item-text li:first-child img{
+  width: 20px;
+  float: left;
+  margin-right: 6px;
+ }
+
+  .product-item-text li:nth-child(2){ /*css phần tử li con thứ 2*/
+  font-size: 14px;
+  color: black;
+ }
+
+ .product-item-text{
+  text-decoration: none;
+  color: #333;
+ }
+ 
+  .product-item:hover .product-item-text li:nth-child(2) a{
+  color: rgb(9, 129, 248); /* Thay đổi màu chữ thành đỏ khi di chuột vào vùng margin của phần sản phẩm */
+}
+
+.product-item-text li .ram {
+  background-color: #e0e0e0;
+  padding: 2px 5px;
+  border-radius: 2px;
+  margin-right: 3px;
+  font-size: 12px;
+}
+
+.product-item-text li .ssd {
+  background-color: #e0e0e0;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+ .product-item-text li:nth-child(4) a{/*css phần tử li con thứ 4*/
+   text-decoration: line-through;
+   color: black;
+   font-size: 14px;
+ }
+
+  .product-item-text li:nth-child(5){ /*css phần tử li con thứ 5*/
+  font-weight: bold;
+  color: #ed391e;
+  font-size: 16px;
+ }
+
+ .product-item-text li:nth-child(6){
+  color: #FB6E2E;
+  font-size: 13px;
+ }
+
+ .gray-star{
+  color: #999;
+ } 
+
+ .product-item-text li:nth-child(7){
+  font-size: 12px;
+  margin-top: 12px;
+  line-height: 18px;
+  color: #333;
+  
+ }
+
+
+   /*------------------------------------------------Macbook---------------------------------------------------*/
+   .product-macbook{
+    background-image: linear-gradient(to bottom right, rgb(21, 21, 21), rgb(100, 99, 99));
+    margin: 65px;
+    border-radius: 8px;
+    padding-bottom: 20px;
+   }
+
+   .products-macbook{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;   /* -----------Tự động xuống dòng--------*/
+    margin-top: 30px;
+   }
+
+   
+   .product-macbook-content{
+    padding-top: 30px;
+   }
+  
+
+   .product-macbook-title h1{
+    color: #141414;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px white; /* ---đổ bóng chữ-----*/  
+   }
+  
+   /*-----------------------------------mục xem tất cả-----------------------------------*/
+   #all-laptop{
+    background-color: #e7dede;
+    margin:10px 400px;
+    border-radius: 10px;
+    padding: 10px 100px;
+  }
+  
+  #all-laptop li{
+    width: 250px;
+  }
+
+  #all-laptop a{
+    text-decoration: none;
+    color: #000000;
+  }
+
+/*------------------------------------------------------LAPTOP_ASUS--------------------------------------------------------*/
+.product-asus{
+  background-image: linear-gradient(to bottom right, rgb(146, 143, 143), rgb(100, 99, 99));
+  margin: 65px;
+  border-radius: 8px;
+  padding-bottom: 20px;
+ }
+
+ .products-asus{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;   /* -----------Tự động xuống dòng--------*/
+  margin-top: 30px;
+ }
+
+ 
+ .product-asus-content{
+  padding-top: 30px;
+ }
+
+
+ .product-asus-title {
+  text-align: center;
+ }
+
+ .product-asus-title img{
+    height: 30px;
+ }
+
+           /*------------------------------------------------LAPTOP HP---------------------------------------------------*/
+ .product-HP{
+  background-image: linear-gradient(to bottom right, rgb(218, 220, 221), rgb(193, 190, 190));
+  margin: 65px;
+  border-radius: 8px;
+  padding-bottom: 20px;
+ }
+
+ .products-HP{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;   /* -----------Tự động xuống dòng--------*/
+  margin-top: -10px;
+ }
+
+ 
+ .product-HP-content{
+  padding-top: 30px;
+ }
+
+ .product-HP-title{
+  text-align: center;
+ }
+
+ .product-HP-title img{
+  height: 80px;
+  width: 130px;
+ 
+ }
+
+ .product-HP-title h1{
+  font-weight: bold;
+  color: #0088d2;
+ }
+
+           /*------------------------------------------------LAPTOP DELL---------------------------------------------------*/
+ .product-dell{
+  background-image: linear-gradient(to bottom right, rgb(20, 20, 20), rgb(182, 234, 248));
+  margin: 65px;
+  border-radius: 8px;
+  padding-bottom: 20px;
+ }
+
+ .products-dell{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;   /* -----------Tự động xuống dòng--------*/
+  
+ }
+
+ 
+ .product-dell-content{
+  padding-top: 30px;
+ }
+
+
+ .product-dell-title{
+  text-align: center; 
+ }
+
+ .product-dell-title img{
+  width: 80px;
+  height: 80px;
+  margin-top: -12px;
+ }
+
+        /*------------------------------------------------LAPTOP MSI---------------------------------------------------*/
+ .product-msi{
+  background-image: linear-gradient(to bottom right, rgb(243, 59, 59), rgb(248, 170, 158));
+  margin: 65px;
+  border-radius: 8px;
+  padding-bottom: 20px;
+ }
+
+ .products-msi{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;   /* -----------Tự động xuống dòng--------*/
+ }
+
+ 
+ .product-msi-content{
+  padding-top: 30px;
+ }
+
+
+ .product-msi-title{ 
+  text-align: center;
+ }
+
+ .product-msi-title img{
+  width: 150px;
+  height: 100px;
+  margin-top: -15px;
+ }
+ 
+    /*------------------------------------------------LENOVO---------------------------------------------------*/
+ .product-lenovo{
+  background-image: linear-gradient(to bottom right, rgb(250, 228, 228), rgb(245, 241, 241));
+  margin: 65px;
+  border-radius: 8px;
+  padding-bottom: 20px;
+ }
+
+ .products-lenovo{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;   /* -----------Tự động xuống dòng--------*/
+  margin-top: 30px;
+ }
+
+ 
+ .product-lenovo-content{
+  padding-top: 30px;
+ }
+
+
+ .product-lenovo-title h1{
+  color: #f10808;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 3px 3px 6px rgb(249, 113, 113); /* ---đổ bóng chữ-----*/  
+ }
+
+
+
+
+ 
